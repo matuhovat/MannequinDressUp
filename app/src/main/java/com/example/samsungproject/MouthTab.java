@@ -20,7 +20,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class FrontHairTab extends Fragment implements View.OnClickListener {
+public class MouthTab extends Fragment implements View.OnClickListener {
 
 
 
@@ -34,15 +34,15 @@ public class FrontHairTab extends Fragment implements View.OnClickListener {
     private String mParam2;
     ImageView doll;
     LayerDrawable dollLayers;
-    Button colorPickerButton;
-    ImageButton frontHairButton1, frontHairButton2, frontHairButton3, frontHairButton4, frontHairButton5;
+    ImageButton mouthButton1, mouthButton2, mouthButton3, mouthButton4, mouthButton5, mouthButton6;
+    final int eyeColorIndex = 1;
 
-    public FrontHairTab() {
+    public MouthTab() {
         // Required empty public constructor
     }
 
-    public static FrontHairTab newInstance(String param1, String param2) {
-        FrontHairTab fragment = new FrontHairTab();
+    public static MouthTab newInstance(String param1, String param2) {
+        MouthTab fragment = new MouthTab();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,20 +63,22 @@ public class FrontHairTab extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_front_hair_tab, container, false);
+        View v = inflater.inflate(R.layout.fragment_mouth_tab, container, false);
         MainActivity main = (MainActivity) getActivity();
         doll = main.findViewById(R.id.Doll);
         dollLayers = (LayerDrawable) ResourcesCompat.getDrawable(getResources(), R.drawable.doll_layers, null);;
-        frontHairButton1 = v.findViewById(R.id.frontHairButton1);
-        frontHairButton2 = v.findViewById(R.id.frontHairButton2);
-        frontHairButton3 = v.findViewById(R.id.frontHairButton3);
-        frontHairButton4 = v.findViewById(R.id.frontHairButton4);
-        frontHairButton5 = v.findViewById(R.id.frontHairButton5);
-        frontHairButton1.setOnClickListener(this);
-        frontHairButton2.setOnClickListener(this);
-        frontHairButton3.setOnClickListener(this);
-        frontHairButton4.setOnClickListener(this);
-        frontHairButton5.setOnClickListener(this);
+        mouthButton1 = v.findViewById(R.id.mouthButton1);
+        mouthButton2 = v.findViewById(R.id.mouthButton2);
+        mouthButton3 = v.findViewById(R.id.mouthButton3);
+        mouthButton4 = v.findViewById(R.id.mouthButton4);
+        mouthButton5 = v.findViewById(R.id.mouthButton5);
+        mouthButton6 = v.findViewById(R.id.mouthButton6);
+        mouthButton1.setOnClickListener(this);
+        mouthButton2.setOnClickListener(this);
+        mouthButton3.setOnClickListener(this);
+        mouthButton4.setOnClickListener(this);
+        mouthButton5.setOnClickListener(this);
+        mouthButton6.setOnClickListener(this);
         return v;
     }
 
@@ -86,22 +88,30 @@ public class FrontHairTab extends Fragment implements View.OnClickListener {
         switch (v.getTag().toString()) {
             default:
                 break;
-            case "frontHair1":
-                dollLayers.setDrawable(5, ResourcesCompat.getDrawable(getResources(), R.drawable.front_hair_1_color, null));
-                dollLayers.setDrawable(6, ResourcesCompat.getDrawable(getResources(), R.drawable.front_hair_1_line, null));
+            case "mouth1":
+                dollLayers.setDrawable(4, ResourcesCompat.getDrawable(getResources(), R.drawable.mouth_1, null));
                 doll.setImageDrawable(dollLayers);
-            case "frontHair2":
-                dollLayers.setDrawable(5, ResourcesCompat.getDrawable(getResources(), R.drawable.front_hair_2_color, null));
-                dollLayers.setDrawable(6, ResourcesCompat.getDrawable(getResources(), R.drawable.front_hair_2_line, null));
+                break;
+            case "mouth2":
+                dollLayers.setDrawable(4, ResourcesCompat.getDrawable(getResources(), R.drawable.mouth_2, null));
                 doll.setImageDrawable(dollLayers);
-            case "frontHair3":
-                dollLayers.setDrawable(5, ResourcesCompat.getDrawable(getResources(), R.drawable.front_hair_3_color, null));
-                dollLayers.setDrawable(6, ResourcesCompat.getDrawable(getResources(), R.drawable.front_hair_3_line, null));
+                break;
+            case "mouth3":
+                dollLayers.setDrawable(4, ResourcesCompat.getDrawable(getResources(), R.drawable.mouth_3, null));
                 doll.setImageDrawable(dollLayers);
-            case "frontHair4":
-                dollLayers.setDrawable(5, ResourcesCompat.getDrawable(getResources(), R.drawable.front_hair_4_color, null));
-                dollLayers.setDrawable(6, ResourcesCompat.getDrawable(getResources(), R.drawable.front_hair_4_line, null));
+                break;
+            case "mouth4":
+                dollLayers.setDrawable(4, ResourcesCompat.getDrawable(getResources(), R.drawable.mouth_4, null));
                 doll.setImageDrawable(dollLayers);
+                break;
+            case "mouth5":
+                dollLayers.setDrawable(4, ResourcesCompat.getDrawable(getResources(), R.drawable.mouth_5, null));
+                doll.setImageDrawable(dollLayers);
+                break;
+            case "mouth6":
+                dollLayers.setDrawable(4, ResourcesCompat.getDrawable(getResources(), R.drawable.mouth_6, null));
+                doll.setImageDrawable(dollLayers);
+                break;
         }
     }
 }

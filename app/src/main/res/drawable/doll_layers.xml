@@ -6,14 +6,40 @@
             android:src="@drawable/body_base_full"
             android:gravity="center_horizontal"/>
     </item>
+<!-- eye color-->
     <item>
         <bitmap
-            android:src="@drawable/body_base"
+            android:src="@drawable/eye_1_color"
             android:gravity="center_horizontal"/>
     </item>
+<!--eye line-->
     <item>
         <bitmap
-            android:src="@drawable/blank_test"
+            android:src="@drawable/eye_1_line"
+            android:gravity="center_horizontal"/>
+    </item>
+<!--eyebrows-->
+    <item>
+        <bitmap
+            android:src="@drawable/brows_1"
+            android:gravity="center_horizontal"/>
+    </item>
+<!--mouth-->
+    <item>
+        <bitmap
+            android:src="@drawable/mouth_1"
+            android:gravity="center_horizontal"/>
+    </item>
+<!--hair color-->
+    <item>
+        <bitmap
+            android:src="@drawable/front_hair_1_color"
+            android:gravity="center_horizontal"/>
+    </item>
+<!--hair line-->
+    <item>
+        <bitmap
+            android:src="@drawable/front_hair_1_line"
             android:gravity="center_horizontal"/>
     </item>
 </layer-list>

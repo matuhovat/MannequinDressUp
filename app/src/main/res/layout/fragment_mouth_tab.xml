@@ -1,7 +1,8 @@
 <TableLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/frontHairCategoryDisplay"
+    android:layout_gravity="left"
+    android:id="@+id/mouthCategoryDisplay"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TableRow
         android:gravity="center_horizontal">
@@ -10,35 +11,44 @@
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/frontHairButton1"
-            android:tag="frontHair1"/>
+            android:id="@+id/mouthButton1"
+            android:tag="mouth1"/>
         <ImageButton
             android:minHeight="75dp"
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/frontHairButton2"
-            android:tag="frontHair2"/>
+            android:id="@+id/mouthButton2"
+            android:tag="mouth2"/>
         <ImageButton
             android:minHeight="75dp"
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/frontHairButton3"
-            android:tag="frontHair3"/>
+            android:id="@+id/mouthButton3"
+            android:tag="mouth3"/>
         <ImageButton
             android:minHeight="75dp"
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/frontHairButton4"
-            android:tag="frontHair4"/>
+            android:id="@+id/mouthButton4"
+            android:tag="mouth4"/>
         <ImageButton
             android:minHeight="75dp"
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/frontHairButton5"
-            android:tag="frontHair5"/>
+            android:id="@+id/mouthButton5"
+            android:tag="mouth5"/>
+    </TableRow>
+    <TableRow>
+        <ImageButton
+            android:minHeight="75dp"
+            android:maxHeight="75dp"
+            android:minWidth="75dp"
+            android:maxWidth="75dp"
+            android:id="@+id/mouthButton6"
+            android:tag="mouth6"/>
     </TableRow>
 </TableLayout>

@@ -1,7 +1,7 @@
 <TableLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/frontHairCategoryDisplay"
+    android:id="@+id/browsCategoryDisplay"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TableRow
         android:gravity="center_horizontal">
@@ -10,35 +10,28 @@
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/frontHairButton1"
-            android:tag="frontHair1"/>
+            android:id="@+id/browsButton1"
+            android:tag="brows1"/>
         <ImageButton
             android:minHeight="75dp"
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/frontHairButton2"
-            android:tag="frontHair2"/>
+            android:id="@+id/browsButton2"
+            android:tag="brows2"/>
         <ImageButton
             android:minHeight="75dp"
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/frontHairButton3"
-            android:tag="frontHair3"/>
+            android:id="@+id/browsButton3"
+            android:tag="brows3"/>
         <ImageButton
             android:minHeight="75dp"
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/frontHairButton4"
-            android:tag="frontHair4"/>
-        <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
-            android:id="@+id/frontHairButton5"
-            android:tag="frontHair5"/>
+            android:id="@+id/browsButton4"
+            android:tag="brows4"/>
     </TableRow>
 </TableLayout>
