@@ -1,7 +1,11 @@
 package com.example.samsungproject;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
@@ -35,7 +39,8 @@ public class EyesTab extends Fragment implements View.OnClickListener {
     ImageView doll;
     LayerDrawable dollLayers;
     ImageButton eyesButton1, eyesButton2, eyesButton3, eyesButton4;
-    final int eyeColorIndex = 1;
+    SharedPreferences drawableValues;
+    SharedPreferences.Editor DVEditor;
 
     public EyesTab() {
         // Required empty public constructor
@@ -66,7 +71,9 @@ public class EyesTab extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.fragment_eyes_tab, container, false);
         MainActivity main = (MainActivity) getActivity();
         doll = main.findViewById(R.id.Doll);
-        dollLayers = (LayerDrawable) ResourcesCompat.getDrawable(getResources(), R.drawable.doll_layers, null);;
+        dollLayers = (LayerDrawable) ResourcesCompat.getDrawable(getResources(), R.drawable.doll_layers, null);
+        drawableValues = main.getSharedPreferences("DrawableValues", MODE_PRIVATE);
+        DVEditor = drawableValues.edit();
         eyesButton1 = v.findViewById(R.id.eyesButton1);
         eyesButton2 = v.findViewById(R.id.eyesButton2);
         eyesButton3 = v.findViewById(R.id.eyesButton3);
@@ -85,23 +92,31 @@ public class EyesTab extends Fragment implements View.OnClickListener {
             default:
                 break;
             case "eyes1":
-                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), R.drawable.eye_1_color, null));
-                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), R.drawable.eye_1_line, null));
+                DVEditor.putInt("eye_color", R.drawable.eye_1_color);
+                DVEditor.putInt("eye_line", R.drawable.eye_1_line);
+                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_color", R.drawable.eye_1_color), null));
+                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_line", R.drawable.eye_1_line), null));
                 doll.setImageDrawable(dollLayers);
                 break;
             case "eyes2":
-                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), R.drawable.eye_2_color, null));
-                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), R.drawable.eye_2_line, null));
+                DVEditor.putInt("eye_color", R.drawable.eye_2_color);
+                DVEditor.putInt("eye_line", R.drawable.eye_2_line);
+                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_color", R.drawable.eye_1_color), null));
+                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_line", R.drawable.eye_1_line), null));
                 doll.setImageDrawable(dollLayers);
                 break;
             case "eyes3":
-                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), R.drawable.eye_3_color, null));
-                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), R.drawable.eye_3_line, null));
+                DVEditor.putInt("eye_color", R.drawable.eye_3_color);
+                DVEditor.putInt("eye_line", R.drawable.eye_3_line);
+                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_color", R.drawable.eye_1_color), null));
+                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_line", R.drawable.eye_1_line), null));
                 doll.setImageDrawable(dollLayers);
                 break;
             case "eyes4":
-                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), R.drawable.eye_4_color, null));
-                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), R.drawable.eye_4_line, null));
+                DVEditor.putInt("eye_color", R.drawable.eye_4_color);
+                DVEditor.putInt("eye_line", R.drawable.eye_4_line);
+                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_color", R.drawable.eye_1_color), null));
+                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_line", R.drawable.eye_1_line), null));
                 doll.setImageDrawable(dollLayers);
                 break;
         }

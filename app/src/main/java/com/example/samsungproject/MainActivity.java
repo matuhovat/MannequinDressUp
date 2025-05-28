@@ -1,6 +1,9 @@
 package com.example.samsungproject;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,6 +11,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -17,7 +21,8 @@ import top.defaults.colorpicker.ColorPickerView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView baseImage;
+    ImageView doll;
+    LayerDrawable dollLayers;
     Button eyesTabButton, browsTabButton, mouthTabButton, frontHairTabButton, topTabButton, colorPickerButton;
     ConstraintLayout categoryContainer;
     ColorPickerView colorPickerView;
@@ -32,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        doll = findViewById(R.id.Doll);
+        dollLayers = (LayerDrawable) ResourcesCompat.getDrawable(getResources(), R.drawable.doll_layers, null);
         colorPickerButton = findViewById(R.id.colorPickerButton);
         eyesTabButton = findViewById(R.id.eyesTabButton);
         browsTabButton = findViewById(R.id.browsTabButton);
@@ -45,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
         mouthTab = new MouthTab();
         frontHairTab = new FrontHairTab();
         topTab = new TopTab();
+        SharedPreferences.Editor editor = getSharedPreferences("DrawableValues", MODE_PRIVATE).edit();
+        editor.putInt("eye_color", R.drawable.eye_1_color);
+        editor.putInt("eye_line", R.drawable.eye_1_line);
+        editor.putInt("brows", R.drawable.brows_1);
+        editor.putInt("mouth", R.drawable.mouth_1);
+        editor.putInt("front_hair_color", R.drawable.front_hair_1_color);
+        editor.putInt("front_hair_line", R.drawable.front_hair_1_line);
+        editor.apply();
 //        colorPickerButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -137,5 +152,9 @@ public class MainActivity extends AppCompatActivity {
                 topTabButton.setEnabled(false);
             }
         });
+//        SharedPreferences drawableValues = getSharedPreferences("DrawableValues", MODE_PRIVATE);
+//        dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_color", R.drawable.eye_1_color), null));
+//        dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_line", R.drawable.eye_1_line), null));
+//        doll.setImageDrawable(dollLayers);
     }
 }
