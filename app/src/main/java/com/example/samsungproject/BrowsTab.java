@@ -85,21 +85,26 @@ public class BrowsTab extends Fragment implements View.OnClickListener {
             default:
                 break;
             case "brows1":
-                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), R.drawable.brows_1, null));
-                doll.setImageDrawable(dollLayers);
+                MainActivity.DVEditor.putInt("brows", R.drawable.brows_1);
+                MainActivity.DVEditor.apply();
+                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), MainActivity.drawableValues.getInt("brows", R.drawable.brows_1), null));
                 break;
             case "brows2":
-                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), R.drawable.brows_2, null));
-                doll.setImageDrawable(dollLayers);
+                MainActivity.DVEditor.putInt("brows", R.drawable.brows_2);
+                MainActivity.DVEditor.apply();
+                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), MainActivity.drawableValues.getInt("brows", R.drawable.brows_1), null));
                 break;
             case "brows3":
-                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), R.drawable.brows_3, null));
-                doll.setImageDrawable(dollLayers);
+                MainActivity.DVEditor.putInt("brows", R.drawable.brows_3);
+                MainActivity.DVEditor.apply();
+                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), MainActivity.drawableValues.getInt("brows", R.drawable.brows_1), null));
                 break;
             case "brows4":
-                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), R.drawable.brows_4, null));
-                doll.setImageDrawable(dollLayers);
+                MainActivity.DVEditor.putInt("brows", R.drawable.brows_4);
+                MainActivity.DVEditor.apply();
+                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), MainActivity.drawableValues.getInt("brows", R.drawable.brows_1), null));
                 break;
         }
+        doll.setImageDrawable(dollLayers);
     }
 }
