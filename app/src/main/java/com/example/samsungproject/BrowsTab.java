@@ -1,7 +1,10 @@
 package com.example.samsungproject;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
@@ -35,7 +38,8 @@ public class BrowsTab extends Fragment implements View.OnClickListener {
     ImageView doll;
     LayerDrawable dollLayers;
     ImageButton browsButton1, browsButton2, browsButton3, browsButton4;
-    final int eyeColorIndex = 1;
+    SharedPreferences drawableValues;
+    SharedPreferences.Editor DVEditor;
 
     public BrowsTab() {
         // Required empty public constructor
@@ -66,7 +70,9 @@ public class BrowsTab extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.fragment_brows_tab, container, false);
         MainActivity main = (MainActivity) getActivity();
         doll = main.findViewById(R.id.Doll);
-        dollLayers = (LayerDrawable) ResourcesCompat.getDrawable(getResources(), R.drawable.doll_layers, null);;
+        dollLayers = (LayerDrawable) ResourcesCompat.getDrawable(getResources(), R.drawable.doll_layers, null);
+        drawableValues = getActivity().getSharedPreferences("drawable_values", MODE_PRIVATE);
+        DVEditor = drawableValues.edit();
         browsButton1 = v.findViewById(R.id.browsButton1);
         browsButton2 = v.findViewById(R.id.browsButton2);
         browsButton3 = v.findViewById(R.id.browsButton3);
@@ -85,24 +91,44 @@ public class BrowsTab extends Fragment implements View.OnClickListener {
             default:
                 break;
             case "brows1":
-                MainActivity.DVEditor.putInt("brows", R.drawable.brows_1);
-                MainActivity.DVEditor.apply();
-                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), MainActivity.drawableValues.getInt("brows", R.drawable.brows_1), null));
+                DVEditor.putInt("brows", R.drawable.brows_1);
+                DVEditor.apply();
+                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_color", R.drawable.eye_1_color), null));
+                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_line", R.drawable.eye_1_line), null));
+                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("brows", R.drawable.brows_1), null));
+                dollLayers.setDrawable(4, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("mouth", R.drawable.mouth_1), null));
+                dollLayers.setDrawable(5, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_color", R.drawable.front_hair_1_color), null));
+                dollLayers.setDrawable(6, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_line", R.drawable.front_hair_1_line), null));
                 break;
             case "brows2":
-                MainActivity.DVEditor.putInt("brows", R.drawable.brows_2);
-                MainActivity.DVEditor.apply();
-                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), MainActivity.drawableValues.getInt("brows", R.drawable.brows_1), null));
+                DVEditor.putInt("brows", R.drawable.brows_2);
+                DVEditor.apply();
+                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_color", R.drawable.eye_1_color), null));
+                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_line", R.drawable.eye_1_line), null));
+                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("brows", R.drawable.brows_1), null));
+                dollLayers.setDrawable(4, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("mouth", R.drawable.mouth_1), null));
+                dollLayers.setDrawable(5, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_color", R.drawable.front_hair_1_color), null));
+                dollLayers.setDrawable(6, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_line", R.drawable.front_hair_1_line), null));
                 break;
             case "brows3":
-                MainActivity.DVEditor.putInt("brows", R.drawable.brows_3);
-                MainActivity.DVEditor.apply();
-                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), MainActivity.drawableValues.getInt("brows", R.drawable.brows_1), null));
+                DVEditor.putInt("brows", R.drawable.brows_3);
+                DVEditor.apply();
+                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_color", R.drawable.eye_1_color), null));
+                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_line", R.drawable.eye_1_line), null));
+                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("brows", R.drawable.brows_1), null));
+                dollLayers.setDrawable(4, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("mouth", R.drawable.mouth_1), null));
+                dollLayers.setDrawable(5, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_color", R.drawable.front_hair_1_color), null));
+                dollLayers.setDrawable(6, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_line", R.drawable.front_hair_1_line), null));
                 break;
             case "brows4":
-                MainActivity.DVEditor.putInt("brows", R.drawable.brows_4);
-                MainActivity.DVEditor.apply();
-                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), MainActivity.drawableValues.getInt("brows", R.drawable.brows_1), null));
+                DVEditor.putInt("brows", R.drawable.brows_4);
+                DVEditor.apply();
+                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_color", R.drawable.eye_1_color), null));
+                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_line", R.drawable.eye_1_line), null));
+                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("brows", R.drawable.brows_1), null));
+                dollLayers.setDrawable(4, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("mouth", R.drawable.mouth_1), null));
+                dollLayers.setDrawable(5, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_color", R.drawable.front_hair_1_color), null));
+                dollLayers.setDrawable(6, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_line", R.drawable.front_hair_1_line), null));
                 break;
         }
         doll.setImageDrawable(dollLayers);

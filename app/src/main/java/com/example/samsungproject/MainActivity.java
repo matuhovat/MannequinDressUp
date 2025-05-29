@@ -21,8 +21,8 @@ import top.defaults.colorpicker.ColorPickerView;
 
 public class MainActivity extends AppCompatActivity {
 
-    static SharedPreferences drawableValues;
-    static SharedPreferences.Editor DVEditor;
+    SharedPreferences drawableValues;
+    SharedPreferences.Editor DVEditor;
     ImageView doll;
     LayerDrawable dollLayers;
     Button eyesTabButton, browsTabButton, mouthTabButton, frontHairTabButton, topTabButton, colorPickerButton;
@@ -54,15 +54,15 @@ public class MainActivity extends AppCompatActivity {
         mouthTab = new MouthTab();
         frontHairTab = new FrontHairTab();
         topTab = new TopTab();
-        drawableValues = getSharedPreferences("DrawableValues", MODE_PRIVATE);
-        DVEditor = drawableValues.edit();
-        DVEditor.putInt("eye_color", R.drawable.eye_1_color);
-        DVEditor.putInt("eye_line", R.drawable.eye_1_line);
-        DVEditor.putInt("brows", R.drawable.brows_1);
-        DVEditor.putInt("mouth", R.drawable.mouth_1);
-        DVEditor.putInt("front_hair_color", R.drawable.front_hair_1_color);
-        DVEditor.putInt("front_hair_line", R.drawable.front_hair_1_line);
-        DVEditor.apply();
+        drawableValues = getSharedPreferences("drawable_values", MODE_PRIVATE);
+//        DVEditor = drawableValues.edit();
+//        DVEditor.putInt("eye_color", R.drawable.eye_1_color);
+//        DVEditor.putInt("eye_line", R.drawable.eye_1_line);
+//        DVEditor.putInt("brows", R.drawable.brows_1);
+//        DVEditor.putInt("mouth", R.drawable.mouth_1);
+//        DVEditor.putInt("front_hair_color", R.drawable.front_hair_1_color);
+//        DVEditor.putInt("front_hair_line", R.drawable.front_hair_1_line);
+//        DVEditor.apply();
 //        colorPickerButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
