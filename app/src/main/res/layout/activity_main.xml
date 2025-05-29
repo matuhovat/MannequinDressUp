@@ -50,30 +50,62 @@
             android:id="@+id/categoryContainer"/>
     </ScrollView>
 
-    <TableLayout
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/categoryBar">
-        <TableRow>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
             <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:id="@+id/eyesTabButton"
                 android:text="@string/eyesTabButtonText"/>
             <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:id="@+id/browsTabButton"
                 android:text="@string/browsTabButtonText"/>
             <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:id="@+id/mouthTabButton"
                 android:text="@string/mouthTabButtonText"/>
             <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:id="@+id/frontHairTabButton"
                 android:text="@string/frontHairTabButtonText"/>
             <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:id="@+id/backHairTabButton"
+                android:text="@string/backHairTabButtonText"/>
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:id="@+id/topTabButton"
                 android:text="@string/topTabButtonText"/>
-        </TableRow>
-    </TableLayout>
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:id="@+id/bottomTabButton"
+                android:text="@string/bottomTabButtonText"/>
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:id="@+id/socksTabButton"
+                android:text="@string/socksTabButtonText"/>
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:id="@+id/shoesTabButton"
+                android:text="@string/shoesTabButtonText"/>
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

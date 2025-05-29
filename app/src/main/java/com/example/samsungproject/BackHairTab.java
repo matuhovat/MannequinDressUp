@@ -23,7 +23,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class FrontHairTab extends Fragment implements View.OnClickListener {
+public class BackHairTab extends Fragment implements View.OnClickListener {
 
 
 
@@ -37,16 +37,16 @@ public class FrontHairTab extends Fragment implements View.OnClickListener {
     private String mParam2;
     ImageView doll;
     LayerDrawable dollLayers;
-    ImageButton frontHairButton1, frontHairButton2, frontHairButton3, frontHairButton4, frontHairButton5;
+    ImageButton backHairButton1, backHairButton2, backHairButton3, backHairButton4, backHairButton5;
     SharedPreferences drawableValues;
     SharedPreferences.Editor DVEditor;
 
-    public FrontHairTab() {
+    public BackHairTab() {
         // Required empty public constructor
     }
 
-    public static FrontHairTab newInstance(String param1, String param2) {
-        FrontHairTab fragment = new FrontHairTab();
+    public static BackHairTab newInstance(String param1, String param2) {
+        BackHairTab fragment = new BackHairTab();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,20 +67,22 @@ public class FrontHairTab extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_front_hair_tab, container, false);
+        View v = inflater.inflate(R.layout.fragment_back_hair_tab, container, false);
         MainActivity main = (MainActivity) getActivity();
         doll = main.findViewById(R.id.Doll);
         dollLayers = (LayerDrawable) ResourcesCompat.getDrawable(getResources(), R.drawable.doll_layers, null);
         drawableValues = getActivity().getSharedPreferences("drawable_values", MODE_PRIVATE);
         DVEditor = drawableValues.edit();
-        frontHairButton1 = v.findViewById(R.id.frontHairButton1);
-        frontHairButton2 = v.findViewById(R.id.frontHairButton2);
-        frontHairButton3 = v.findViewById(R.id.frontHairButton3);
-        frontHairButton4 = v.findViewById(R.id.frontHairButton4);
-        frontHairButton1.setOnClickListener(this);
-        frontHairButton2.setOnClickListener(this);
-        frontHairButton3.setOnClickListener(this);
-        frontHairButton4.setOnClickListener(this);
+        backHairButton1 = v.findViewById(R.id.backHairButton1);
+        backHairButton2 = v.findViewById(R.id.backHairButton2);
+        backHairButton3 = v.findViewById(R.id.backHairButton3);
+        backHairButton4 = v.findViewById(R.id.backHairButton4);
+        backHairButton5 = v.findViewById(R.id.backHairButton5);
+        backHairButton1.setOnClickListener(this);
+        backHairButton2.setOnClickListener(this);
+        backHairButton3.setOnClickListener(this);
+        backHairButton4.setOnClickListener(this);
+        backHairButton5.setOnClickListener(this);
         return v;
     }
 
@@ -90,9 +92,9 @@ public class FrontHairTab extends Fragment implements View.OnClickListener {
         switch (v.getTag().toString()) {
             default:
                 break;
-            case "frontHair1":
-                DVEditor.putInt("front_hair_color", R.drawable.front_hair_1_color);
-                DVEditor.putInt("front_hair_line", R.drawable.front_hair_1_line);
+            case "backHair1":
+                DVEditor.putInt("back_hair_color", R.drawable.back_hair_1_color);
+                DVEditor.putInt("back_hair_line", R.drawable.back_hair_1_line);
                 DVEditor.apply();
                 dollLayers.setDrawable(0, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("back_hair_color", R.drawable.back_hair_1_color), null));
                 dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("back_hair_line", R.drawable.back_hair_1_line), null));
@@ -111,9 +113,10 @@ public class FrontHairTab extends Fragment implements View.OnClickListener {
                 dollLayers.setDrawable(14, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("top_line", R.drawable.top_1_line), null));
                 dollLayers.setDrawable(15, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_color", R.drawable.front_hair_1_color), null));
                 dollLayers.setDrawable(16, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_line", R.drawable.front_hair_1_line), null));
-            case "frontHair2":
-                DVEditor.putInt("front_hair_color", R.drawable.front_hair_2_color);
-                DVEditor.putInt("front_hair_line", R.drawable.front_hair_2_line);
+                break;
+            case "backHair2":
+                DVEditor.putInt("back_hair_color", R.drawable.back_hair_2_color);
+                DVEditor.putInt("back_hair_line", R.drawable.back_hair_2_line);
                 DVEditor.apply();
                 dollLayers.setDrawable(0, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("back_hair_color", R.drawable.back_hair_1_color), null));
                 dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("back_hair_line", R.drawable.back_hair_1_line), null));
@@ -132,9 +135,10 @@ public class FrontHairTab extends Fragment implements View.OnClickListener {
                 dollLayers.setDrawable(14, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("top_line", R.drawable.top_1_line), null));
                 dollLayers.setDrawable(15, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_color", R.drawable.front_hair_1_color), null));
                 dollLayers.setDrawable(16, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_line", R.drawable.front_hair_1_line), null));
-            case "frontHair3":
-                DVEditor.putInt("front_hair_color", R.drawable.front_hair_3_color);
-                DVEditor.putInt("front_hair_line", R.drawable.front_hair_3_line);
+                break;
+            case "backHair3":
+                DVEditor.putInt("back_hair_color", R.drawable.back_hair_3_color);
+                DVEditor.putInt("back_hair_line", R.drawable.back_hair_3_line);
                 DVEditor.apply();
                 dollLayers.setDrawable(0, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("back_hair_color", R.drawable.back_hair_1_color), null));
                 dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("back_hair_line", R.drawable.back_hair_1_line), null));
@@ -153,9 +157,10 @@ public class FrontHairTab extends Fragment implements View.OnClickListener {
                 dollLayers.setDrawable(14, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("top_line", R.drawable.top_1_line), null));
                 dollLayers.setDrawable(15, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_color", R.drawable.front_hair_1_color), null));
                 dollLayers.setDrawable(16, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_line", R.drawable.front_hair_1_line), null));
-            case "frontHair4":
-                DVEditor.putInt("front_hair_color", R.drawable.front_hair_4_color);
-                DVEditor.putInt("front_hair_line", R.drawable.front_hair_4_line);
+                break;
+            case "backHair4":
+                DVEditor.putInt("back_hair_color", R.drawable.back_hair_4_color);
+                DVEditor.putInt("back_hair_line", R.drawable.back_hair_4_line);
                 DVEditor.apply();
                 dollLayers.setDrawable(0, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("back_hair_color", R.drawable.back_hair_1_color), null));
                 dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("back_hair_line", R.drawable.back_hair_1_line), null));
@@ -174,6 +179,29 @@ public class FrontHairTab extends Fragment implements View.OnClickListener {
                 dollLayers.setDrawable(14, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("top_line", R.drawable.top_1_line), null));
                 dollLayers.setDrawable(15, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_color", R.drawable.front_hair_1_color), null));
                 dollLayers.setDrawable(16, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_line", R.drawable.front_hair_1_line), null));
+                break;
+            case "backHair5":
+                DVEditor.putInt("back_hair_color", R.drawable.back_hair_5_color);
+                DVEditor.putInt("back_hair_line", R.drawable.back_hair_5_line);
+                DVEditor.apply();
+                dollLayers.setDrawable(0, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("back_hair_color", R.drawable.back_hair_1_color), null));
+                dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("back_hair_line", R.drawable.back_hair_1_line), null));
+                dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), R.drawable.body_base_full, null));
+                dollLayers.setDrawable(3, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_color", R.drawable.eye_1_color), null));
+                dollLayers.setDrawable(4, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_line", R.drawable.eye_1_line), null));
+                dollLayers.setDrawable(5, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("brows", R.drawable.brows_1), null));
+                dollLayers.setDrawable(6, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("mouth", R.drawable.mouth_1), null));
+                dollLayers.setDrawable(7, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("socks_color", R.drawable.socks_1_color), null));
+                dollLayers.setDrawable(8, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("socks_line", R.drawable.socks_1_line), null));
+                dollLayers.setDrawable(9, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("shoes_color", R.drawable.shoes_1_color), null));
+                dollLayers.setDrawable(10, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("shoes_line", R.drawable.shoes_1_line), null));
+                dollLayers.setDrawable(11, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("bottom_color", R.drawable.bottom_1_color), null));
+                dollLayers.setDrawable(12, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("bottom_line", R.drawable.bottom_1_line), null));
+                dollLayers.setDrawable(13, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("top_color", R.drawable.top_1_color), null));
+                dollLayers.setDrawable(14, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("top_line", R.drawable.top_1_line), null));
+                dollLayers.setDrawable(15, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_color", R.drawable.front_hair_1_color), null));
+                dollLayers.setDrawable(16, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("front_hair_line", R.drawable.front_hair_1_line), null));
+                break;
         }
         doll.setImageDrawable(dollLayers);
     }

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list
     xmlns:android="http://schemas.android.com/apk/res/android">
+<!--back hair color-->
+    <item>
+        <bitmap
+            android:src="@drawable/back_hair_1_color"
+            android:gravity="center_horizontal"/>
+    </item>
+    <!--back hair line-->
+    <item>
+        <bitmap
+            android:src="@drawable/back_hair_1_line"
+            android:gravity="center_horizontal"/>
+    </item>
     <item>
         <bitmap
             android:src="@drawable/body_base_full"
@@ -28,6 +40,54 @@
     <item>
         <bitmap
             android:src="@drawable/mouth_1"
+            android:gravity="center_horizontal"/>
+    </item>
+    <!--socks color-->
+    <item>
+        <bitmap
+            android:src="@drawable/socks_1_color"
+            android:gravity="center_horizontal"/>
+    </item>
+    <!--socks line-->
+    <item>
+        <bitmap
+            android:src="@drawable/socks_1_line"
+            android:gravity="center_horizontal"/>
+    </item>
+    <!--shoes color-->
+    <item>
+        <bitmap
+            android:src="@drawable/shoes_1_color"
+            android:gravity="center_horizontal"/>
+    </item>
+    <!--shoes line-->
+    <item>
+        <bitmap
+            android:src="@drawable/shoes_1_line"
+            android:gravity="center_horizontal"/>
+    </item>
+    <!--bottom color-->
+    <item>
+        <bitmap
+            android:src="@drawable/bottom_1_color"
+            android:gravity="center_horizontal"/>
+    </item>
+    <!--bottom line-->
+    <item>
+        <bitmap
+            android:src="@drawable/bottom_1_line"
+            android:gravity="center_horizontal"/>
+    </item>
+    <!--top color-->
+    <item>
+        <bitmap
+            android:src="@drawable/top_1_color"
+            android:gravity="center_horizontal"/>
+    </item>
+    <!--mouth-->
+    <item>
+        <bitmap
+            android:src="@drawable/top_1_line"
             android:gravity="center_horizontal"/>
     </item>
 <!--hair color-->

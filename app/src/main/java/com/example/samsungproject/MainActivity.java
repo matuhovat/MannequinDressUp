@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences.Editor DVEditor;
     ImageView doll;
     LayerDrawable dollLayers;
-    Button eyesTabButton, browsTabButton, mouthTabButton, frontHairTabButton, topTabButton, colorPickerButton;
+    Button eyesTabButton, browsTabButton, mouthTabButton, frontHairTabButton, backHairTabButton, topTabButton, bottomTabButton, socksTabButton, shoesTabButton, colorPickerButton;
     ConstraintLayout categoryContainer;
     ColorPickerView colorPickerView;
     FragmentManager categoryFM;
@@ -33,7 +33,11 @@ public class MainActivity extends AppCompatActivity {
     BrowsTab browsTab;
     MouthTab mouthTab;
     FrontHairTab frontHairTab;
+    BackHairTab backHairTab;
     TopTab topTab;
+    BottomTab bottomTab;
+    SocksTab socksTab;
+    ShoesTab shoesTab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +50,22 @@ public class MainActivity extends AppCompatActivity {
         browsTabButton = findViewById(R.id.browsTabButton);
         mouthTabButton = findViewById(R.id.mouthTabButton);
         frontHairTabButton = findViewById(R.id.frontHairTabButton);
+        backHairTabButton = findViewById(R.id.backHairTabButton);
         topTabButton = findViewById(R.id.topTabButton);
+        bottomTabButton = findViewById(R.id.bottomTabButton);
+        socksTabButton = findViewById(R.id.socksTabButton);
+        shoesTabButton = findViewById(R.id.shoesTabButton);
         categoryContainer = findViewById(R.id.categoryContainer);
         categoryFM = getSupportFragmentManager();
         eyesTab = new EyesTab();
         browsTab = new BrowsTab();
         mouthTab = new MouthTab();
         frontHairTab = new FrontHairTab();
+        backHairTab = new BackHairTab();
         topTab = new TopTab();
+        bottomTab = new BottomTab();
+        socksTab = new SocksTab();
+        shoesTab = new ShoesTab();
         drawableValues = getSharedPreferences("drawable_values", MODE_PRIVATE);
 //        DVEditor = drawableValues.edit();
 //        DVEditor.putInt("eye_color", R.drawable.eye_1_color);
@@ -100,7 +112,10 @@ public class MainActivity extends AppCompatActivity {
                 browsTabButton.setEnabled(true);
                 mouthTabButton.setEnabled(true);
                 frontHairTabButton.setEnabled(true);
-                topTabButton.setEnabled(true);
+                backHairTabButton.setEnabled(true);
+                bottomTabButton.setEnabled(true);
+                socksTabButton.setEnabled(true);
+                shoesTabButton.setEnabled(true);
             }
         });
         browsTabButton.setOnClickListener(new View.OnClickListener() {
@@ -113,7 +128,10 @@ public class MainActivity extends AppCompatActivity {
                 browsTabButton.setEnabled(false);
                 mouthTabButton.setEnabled(true);
                 frontHairTabButton.setEnabled(true);
-                topTabButton.setEnabled(true);
+                backHairTabButton.setEnabled(true);
+                bottomTabButton.setEnabled(true);
+                socksTabButton.setEnabled(true);
+                shoesTabButton.setEnabled(true);
             }
         });
         mouthTabButton.setOnClickListener(new View.OnClickListener() {
@@ -126,7 +144,10 @@ public class MainActivity extends AppCompatActivity {
                 browsTabButton.setEnabled(true);
                 mouthTabButton.setEnabled(false);
                 frontHairTabButton.setEnabled(true);
-                topTabButton.setEnabled(true);
+                backHairTabButton.setEnabled(true);
+                bottomTabButton.setEnabled(true);
+                socksTabButton.setEnabled(true);
+                shoesTabButton.setEnabled(true);
             }
         });
         frontHairTabButton.setOnClickListener(new View.OnClickListener() {
@@ -139,7 +160,28 @@ public class MainActivity extends AppCompatActivity {
                 browsTabButton.setEnabled(true);
                 mouthTabButton.setEnabled(true);
                 frontHairTabButton.setEnabled(false);
+                backHairTabButton.setEnabled(true);
                 topTabButton.setEnabled(true);
+                bottomTabButton.setEnabled(true);
+                socksTabButton.setEnabled(true);
+                shoesTabButton.setEnabled(true);
+            }
+        });
+        backHairTabButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction categoryFT = categoryFM.beginTransaction();
+                categoryFT.replace(R.id.categoryContainer, backHairTab);
+                categoryFT.commit();
+                eyesTabButton.setEnabled(true);
+                browsTabButton.setEnabled(true);
+                mouthTabButton.setEnabled(true);
+                frontHairTabButton.setEnabled(true);
+                backHairTabButton.setEnabled(false);
+                topTabButton.setEnabled(true);
+                bottomTabButton.setEnabled(true);
+                socksTabButton.setEnabled(true);
+                shoesTabButton.setEnabled(true);
             }
         });
         topTabButton.setOnClickListener(new View.OnClickListener() {
@@ -152,11 +194,63 @@ public class MainActivity extends AppCompatActivity {
                 browsTabButton.setEnabled(true);
                 mouthTabButton.setEnabled(true);
                 frontHairTabButton.setEnabled(true);
+                backHairTabButton.setEnabled(true);
                 topTabButton.setEnabled(false);
+                bottomTabButton.setEnabled(true);
+                socksTabButton.setEnabled(true);
+                shoesTabButton.setEnabled(true);
             }
         });
-//        dollLayers.setDrawable(1, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_color", R.drawable.eye_1_color), null));
-//        dollLayers.setDrawable(2, ResourcesCompat.getDrawable(getResources(), drawableValues.getInt("eye_line", R.drawable.eye_1_line), null));
-//        doll.setImageDrawable(dollLayers);
+        bottomTabButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction categoryFT = categoryFM.beginTransaction();
+                categoryFT.replace(R.id.categoryContainer, bottomTab);
+                categoryFT.commit();
+                eyesTabButton.setEnabled(true);
+                browsTabButton.setEnabled(true);
+                mouthTabButton.setEnabled(true);
+                frontHairTabButton.setEnabled(true);
+                backHairTabButton.setEnabled(true);
+                topTabButton.setEnabled(true);
+                bottomTabButton.setEnabled(false);
+                socksTabButton.setEnabled(true);
+                shoesTabButton.setEnabled(true);
+            }
+        });
+        socksTabButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction categoryFT = categoryFM.beginTransaction();
+                categoryFT.replace(R.id.categoryContainer, socksTab);
+                categoryFT.commit();
+                eyesTabButton.setEnabled(true);
+                browsTabButton.setEnabled(true);
+                mouthTabButton.setEnabled(true);
+                frontHairTabButton.setEnabled(true);
+                backHairTabButton.setEnabled(true);
+                topTabButton.setEnabled(true);
+                bottomTabButton.setEnabled(true);
+                socksTabButton.setEnabled(false);
+                shoesTabButton.setEnabled(true);
+            }
+        });
+        shoesTabButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction categoryFT = categoryFM.beginTransaction();
+                categoryFT.replace(R.id.categoryContainer, shoesTab);
+                categoryFT.commit();
+                eyesTabButton.setEnabled(true);
+                browsTabButton.setEnabled(true);
+                mouthTabButton.setEnabled(true);
+                frontHairTabButton.setEnabled(true);
+                backHairTabButton.setEnabled(true);
+                topTabButton.setEnabled(true);
+                bottomTabButton.setEnabled(true);
+                socksTabButton.setEnabled(true);
+                shoesTabButton.setEnabled(false);
+            }
+        });
     }
 }

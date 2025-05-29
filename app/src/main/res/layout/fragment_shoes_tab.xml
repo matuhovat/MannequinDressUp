@@ -1,7 +1,7 @@
 <TableLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/topCategoryDisplay"
+    android:id="@+id/shoesCategoryDisplay"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TableRow
         android:gravity="center_horizontal">
@@ -10,21 +10,21 @@
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/topButton1"
-            android:tag="top1"/>
+            android:id="@+id/shoesButton1"
+            android:tag="shoes1"/>
         <ImageButton
             android:minHeight="75dp"
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/topButton2"
-            android:tag="top2"/>
+            android:id="@+id/shoesButton2"
+            android:tag="shoes2"/>
         <ImageButton
             android:minHeight="75dp"
             android:maxHeight="75dp"
             android:minWidth="75dp"
             android:maxWidth="75dp"
-            android:id="@+id/topButton3"
-            android:tag="top3"/>
+            android:id="@+id/shoesButton3"
+            android:tag="shoes3"/>
     </TableRow>
 </TableLayout>
