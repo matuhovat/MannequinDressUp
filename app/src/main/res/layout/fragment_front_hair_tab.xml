@@ -6,31 +6,35 @@
     <TableRow
         android:gravity="center_horizontal">
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/fh1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/frontHairButton1"
             android:tag="frontHair1"/>
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/fh2"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/frontHairButton2"
             android:tag="frontHair2"/>
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/fh3"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/frontHairButton3"
             android:tag="frontHair3"/>
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/fh4"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/frontHairButton4"
             android:tag="frontHair4"/>
     </TableRow>

@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">SamsungProject</string>
-    <string name="frontHairTabButtonText">Front Hair</string>
-    <string name="eyesTabButtonText">Eyes</string>
-    <string name="topTabButtonText">Top</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="browsTabButtonText">Brows</string>
-    <string name="mouthTabButtonText">Mouth</string>
-    <string name="bottomTabButtonText">Bottom</string>
-    <string name="backHairTabButtonText">Back Hair</string>
-    <string name="socksTabButtonText">Socks</string>
-    <string name="shoesTabButtonText">Shoes</string>
+    <string name="app_name">Виртуальная Примерочная</string>
+    <string name="frontHairTabButtonText">Чёлка</string>
+    <string name="eyesTabButtonText">Глаза</string>
+    <string name="topTabButtonText">Верх</string>
+    <string name="browsTabButtonText">Брови</string>
+    <string name="mouthTabButtonText">Рот</string>
+    <string name="bottomTabButtonText">Низ</string>
+    <string name="backHairTabButtonText">Волосы</string>
+    <string name="socksTabButtonText">Носки</string>
+    <string name="shoesTabButtonText">Обувь</string>
+    <string name="hatTabButtonText">Головной убор</string>
+    <string name="neckTabButtonText">Аксессуары на шею</string>
 </resources>

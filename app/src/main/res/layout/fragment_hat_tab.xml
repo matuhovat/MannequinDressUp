@@ -1,57 +1,58 @@
 <TableLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/bottomCategoryDisplay"
+    android:id="@+id/hatCategoryDisplay"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TableRow
         android:gravity="center_horizontal">
         <ImageButton
-            android:src="@drawable/b1"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:id="@+id/bottomButton1"
-            android:tag="bottom1"/>
+            android:id="@+id/hatButton1"
+            android:tag="hat1"/>
         <ImageButton
-            android:src="@drawable/b2"
+            android:src="@drawable/h1"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:id="@+id/bottomButton2"
-            android:tag="bottom2"/>
+            android:id="@+id/hatButton2"
+            android:tag="hat2"/>
         <ImageButton
-            android:src="@drawable/b3"
+            android:src="@drawable/h2"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:id="@+id/bottomButton3"
-            android:tag="bottom3"/>
+            android:id="@+id/hatButton3"
+            android:tag="hat3"/>
         <ImageButton
-            android:src="@drawable/b4"
+            android:src="@drawable/h3"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:id="@+id/bottomButton4"
-            android:tag="bottom4"/>
+            android:id="@+id/hatButton4"
+            android:tag="hat4"/>
     </TableRow>
     <TableRow
         android:gravity="center_horizontal">
         <ImageButton
-            android:src="@drawable/b5"
+            android:src="@drawable/h4"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:id="@+id/bottomButton5"
-            android:tag="bottom5"/>
+            android:id="@+id/hatButton5"
+            android:tag="hat5"/>
         <ImageButton
+            android:src="@drawable/h5"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:visibility="invisible"/>
+            android:id="@+id/hatButton6"
+            android:tag="hat6"/>
         <ImageButton
             android:layout_height="75dp"
             android:layout_width="75dp"

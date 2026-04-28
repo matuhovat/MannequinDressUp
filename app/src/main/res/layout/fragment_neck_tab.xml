@@ -1,57 +1,58 @@
 <TableLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/bottomCategoryDisplay"
+    android:id="@+id/neckCategoryDisplay"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TableRow
         android:gravity="center_horizontal">
         <ImageButton
-            android:src="@drawable/b1"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:id="@+id/bottomButton1"
-            android:tag="bottom1"/>
+            android:id="@+id/neckButton1"
+            android:tag="neck1"/>
         <ImageButton
-            android:src="@drawable/b2"
+            android:src="@drawable/n1"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:id="@+id/bottomButton2"
-            android:tag="bottom2"/>
+            android:id="@+id/neckButton2"
+            android:tag="neck2"/>
         <ImageButton
-            android:src="@drawable/b3"
+            android:src="@drawable/n2"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:id="@+id/bottomButton3"
-            android:tag="bottom3"/>
+            android:id="@+id/neckButton3"
+            android:tag="neck3"/>
         <ImageButton
-            android:src="@drawable/b4"
+            android:src="@drawable/n3"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:id="@+id/bottomButton4"
-            android:tag="bottom4"/>
+            android:id="@+id/neckButton4"
+            android:tag="neck4"/>
     </TableRow>
     <TableRow
         android:gravity="center_horizontal">
         <ImageButton
-            android:src="@drawable/b5"
+            android:src="@drawable/n4"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:id="@+id/bottomButton5"
-            android:tag="bottom5"/>
+            android:id="@+id/neckButton5"
+            android:tag="neck5"/>
         <ImageButton
+            android:src="@drawable/n5"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
             android:layout_height="75dp"
             android:layout_width="75dp"
-            android:visibility="invisible"/>
+            android:id="@+id/neckButton6"
+            android:tag="neck6"/>
         <ImageButton
             android:layout_height="75dp"
             android:layout_width="75dp"

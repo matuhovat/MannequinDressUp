@@ -7,48 +7,63 @@
     <TableRow
         android:gravity="center_horizontal">
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/m1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/mouthButton1"
             android:tag="mouth1"/>
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/m2"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/mouthButton2"
             android:tag="mouth2"/>
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/m3"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/mouthButton3"
             android:tag="mouth3"/>
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/m4"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/mouthButton4"
             android:tag="mouth4"/>
+    </TableRow>
+    <TableRow
+        android:gravity="center_horizontal">
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/m5"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/mouthButton5"
             android:tag="mouth5"/>
-    </TableRow>
-    <TableRow>
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/m6"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/mouthButton6"
             android:tag="mouth6"/>
+        <ImageButton
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:visibility="invisible"/>
+        <ImageButton
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:visibility="invisible"/>
     </TableRow>
 </TableLayout>

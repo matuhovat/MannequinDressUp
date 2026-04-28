@@ -7,16 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--    <top.defaults.colorpicker.ColorPickerView-->
-<!--        android:id="@+id/colorPicker"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:enableBrightness="true"-->
-<!--        app:enableAlpha="true"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"/>-->
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="375dp"
@@ -27,18 +17,49 @@
         android:id="@+id/Doll"
         android:src="@drawable/doll_layers"/>
 
-    <Button
+    <FrameLayout
         android:layout_width="75dp"
         android:layout_height="75dp"
+        android:layout_margin="10dp"
+        android:id="@+id/colorButtonContainer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/categoryScroller"
-        android:id="@+id/colorPickerButton"
-        android:tag="colorPicker"/>
+        app:layout_constraintBottom_toTopOf="@id/categoryScroller">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/colorPickerButton"
+            android:tag="colorPicker"/>
+        <ImageView
+            android:src="@drawable/color_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_margin="10dp"
+        android:id="@+id/skinColorButtonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/colorButtonContainer">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/skinColorPickerButton"
+            android:tag="skinColorPicker"/>
+        <ImageView
+            android:src="@drawable/skin_color_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"/>
+    </FrameLayout>
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        android:background="#CDC3EB"
         app:layout_constraintBottom_toTopOf="@id/categoryBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,13 +67,14 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/categoryContainer"/>
     </ScrollView>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#CDC3EB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,50 +83,60 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
             <Button
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:id="@+id/eyesTabButton"
                 android:text="@string/eyesTabButtonText"/>
             <Button
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:id="@+id/browsTabButton"
                 android:text="@string/browsTabButtonText"/>
             <Button
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:id="@+id/mouthTabButton"
                 android:text="@string/mouthTabButtonText"/>
             <Button
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:id="@+id/frontHairTabButton"
                 android:text="@string/frontHairTabButtonText"/>
             <Button
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:id="@+id/backHairTabButton"
                 android:text="@string/backHairTabButtonText"/>
             <Button
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:id="@+id/topTabButton"
                 android:text="@string/topTabButtonText"/>
             <Button
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:id="@+id/bottomTabButton"
                 android:text="@string/bottomTabButtonText"/>
             <Button
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:id="@+id/socksTabButton"
                 android:text="@string/socksTabButtonText"/>
             <Button
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:id="@+id/shoesTabButton"
                 android:text="@string/shoesTabButtonText"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:id="@+id/hatTabButton"
+                android:text="@string/hatTabButtonText"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:id="@+id/neckTabButton"
+                android:text="@string/neckTabButtonText"/>
         </LinearLayout>
     </HorizontalScrollView>
 

@@ -6,25 +6,36 @@
     <TableRow
         android:gravity="center_horizontal">
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/f1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/shoesButton1"
             android:tag="shoes1"/>
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/f2"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/shoesButton2"
             android:tag="shoes2"/>
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/f3"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/shoesButton3"
             android:tag="shoes3"/>
+        <ImageButton
+            android:src="@drawable/f4"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:id="@+id/shoesButton4"
+            android:tag="shoes4"/>
     </TableRow>
 </TableLayout>

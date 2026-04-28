@@ -15,7 +15,12 @@
     </item>
     <item>
         <bitmap
-            android:src="@drawable/body_base_full"
+            android:src="@drawable/body_base_color"
+            android:gravity="center_horizontal"/>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/body_base_line"
             android:gravity="center_horizontal"/>
     </item>
 <!-- eye color-->
@@ -90,6 +95,26 @@
             android:src="@drawable/top_1_line"
             android:gravity="center_horizontal"/>
     </item>
+    <item>
+        <bitmap
+            android:src="@drawable/empty"
+            android:gravity="center_horizontal"/>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/empty"
+            android:gravity="center_horizontal"/>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/empty"
+            android:gravity="center_horizontal"/>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/empty"
+            android:gravity="center_horizontal"/>
+    </item>
 <!--hair color-->
     <item>
         <bitmap
@@ -100,6 +125,16 @@
     <item>
         <bitmap
             android:src="@drawable/front_hair_1_line"
+            android:gravity="center_horizontal"/>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/empty"
+            android:gravity="center_horizontal"/>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/empty"
             android:gravity="center_horizontal"/>
     </item>
 </layer-list>

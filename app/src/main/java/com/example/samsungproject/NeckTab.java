@@ -2,30 +2,25 @@ package com.example.samsungproject;
 
 import static android.content.Context.MODE_PRIVATE;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class MouthTab extends Fragment implements View.OnClickListener {
-
-
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link NeckTab#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class NeckTab extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,16 +32,25 @@ public class MouthTab extends Fragment implements View.OnClickListener {
     private String mParam2;
     ImageView doll;
     LayerDrawable dollLayers;
-    ImageButton mouthButton1, mouthButton2, mouthButton3, mouthButton4, mouthButton5, mouthButton6;
+    ImageButton neckButton1, neckButton2, neckButton3, neckButton4, neckButton5, neckButton6;
     SharedPreferences drawableValues;
     SharedPreferences.Editor DVEditor;
 
-    public MouthTab() {
+    public NeckTab() {
         // Required empty public constructor
     }
 
-    public static MouthTab newInstance(String param1, String param2) {
-        MouthTab fragment = new MouthTab();
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment NeckTab.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static NeckTab newInstance(String param1, String param2) {
+        NeckTab fragment = new NeckTab();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,19 +71,19 @@ public class MouthTab extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_mouth_tab, container, false);
-        mouthButton1 = v.findViewById(R.id.mouthButton1);
-        mouthButton2 = v.findViewById(R.id.mouthButton2);
-        mouthButton3 = v.findViewById(R.id.mouthButton3);
-        mouthButton4 = v.findViewById(R.id.mouthButton4);
-        mouthButton5 = v.findViewById(R.id.mouthButton5);
-        mouthButton6 = v.findViewById(R.id.mouthButton6);
-        mouthButton1.setOnClickListener(this);
-        mouthButton2.setOnClickListener(this);
-        mouthButton3.setOnClickListener(this);
-        mouthButton4.setOnClickListener(this);
-        mouthButton5.setOnClickListener(this);
-        mouthButton6.setOnClickListener(this);
+        View v = inflater.inflate(R.layout.fragment_neck_tab, container, false);
+        neckButton1 = v.findViewById(R.id.neckButton1);
+        neckButton2 = v.findViewById(R.id.neckButton2);
+        neckButton3 = v.findViewById(R.id.neckButton3);
+        neckButton4 = v.findViewById(R.id.neckButton4);
+        neckButton5 = v.findViewById(R.id.neckButton5);
+        neckButton6 = v.findViewById(R.id.neckButton6);
+        neckButton1.setOnClickListener(this);
+        neckButton2.setOnClickListener(this);
+        neckButton3.setOnClickListener(this);
+        neckButton4.setOnClickListener(this);
+        neckButton5.setOnClickListener(this);
+        neckButton6.setOnClickListener(this);
         return v;
     }
 
@@ -93,28 +97,34 @@ public class MouthTab extends Fragment implements View.OnClickListener {
         switch (v.getTag().toString()) {
             default:
                 break;
-            case "mouth1":
-                DVEditor.putInt("mouth", R.drawable.mouth_1);
+            case "neck1":
+                DVEditor.putInt("neck_color", R.drawable.empty);
+                DVEditor.putInt("neck_line", R.drawable.empty);
                 DVEditor.apply();
                 break;
-            case "mouth2":
-                DVEditor.putInt("mouth", R.drawable.mouth_2);
+            case "neck2":
+                DVEditor.putInt("neck_color", R.drawable.neck_1_color);
+                DVEditor.putInt("neck_line", R.drawable.neck_1_line);
                 DVEditor.apply();
                 break;
-            case "mouth3":
-                DVEditor.putInt("mouth", R.drawable.mouth_3);
+            case "neck3":
+                DVEditor.putInt("neck_color", R.drawable.neck_2_color);
+                DVEditor.putInt("neck_line", R.drawable.neck_2_line);
                 DVEditor.apply();
                 break;
-            case "mouth4":
-                DVEditor.putInt("mouth", R.drawable.mouth_4);
+            case "neck4":
+                DVEditor.putInt("neck_color", R.drawable.neck_3_color);
+                DVEditor.putInt("neck_line", R.drawable.neck_3_line);
                 DVEditor.apply();
                 break;
-            case "mouth5":
-                DVEditor.putInt("mouth", R.drawable.mouth_5);
+            case "neck5":
+                DVEditor.putInt("neck_color", R.drawable.neck_4_color);
+                DVEditor.putInt("neck_line", R.drawable.neck_4_line);
                 DVEditor.apply();
                 break;
-            case "mouth6":
-                DVEditor.putInt("mouth", R.drawable.mouth_6);
+            case "neck6":
+                DVEditor.putInt("neck_color", R.drawable.neck_5_color);
+                DVEditor.putInt("neck_line", R.drawable.neck_5_line);
                 DVEditor.apply();
                 break;
         }

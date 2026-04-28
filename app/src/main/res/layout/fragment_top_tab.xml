@@ -6,25 +6,62 @@
     <TableRow
         android:gravity="center_horizontal">
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/t1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/topButton1"
             android:tag="top1"/>
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/t2"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/topButton2"
             android:tag="top2"/>
         <ImageButton
-            android:minHeight="75dp"
-            android:maxHeight="75dp"
-            android:minWidth="75dp"
-            android:maxWidth="75dp"
+            android:src="@drawable/t3"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
             android:id="@+id/topButton3"
             android:tag="top3"/>
+        <ImageButton
+            android:src="@drawable/t4"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:id="@+id/topButton4"
+            android:tag="top4"/>
+    </TableRow>
+    <TableRow
+        android:gravity="center_horizontal">
+        <ImageButton
+            android:src="@drawable/t5"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:id="@+id/topButton5"
+            android:tag="top5"/>
+        <ImageButton
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:visibility="invisible"/>
+        <ImageButton
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:visibility="invisible"/>
+        <ImageButton
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:visibility="invisible"/>
     </TableRow>
 </TableLayout>

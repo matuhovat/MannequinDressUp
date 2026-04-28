@@ -2,30 +2,25 @@ package com.example.samsungproject;
 
 import static android.content.Context.MODE_PRIVATE;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class MouthTab extends Fragment implements View.OnClickListener {
-
-
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link HatTab#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class HatTab extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,16 +32,25 @@ public class MouthTab extends Fragment implements View.OnClickListener {
     private String mParam2;
     ImageView doll;
     LayerDrawable dollLayers;
-    ImageButton mouthButton1, mouthButton2, mouthButton3, mouthButton4, mouthButton5, mouthButton6;
+    ImageButton hatButton1, hatButton2, hatButton3, hatButton4, hatButton5, hatButton6;
     SharedPreferences drawableValues;
     SharedPreferences.Editor DVEditor;
 
-    public MouthTab() {
+    public HatTab() {
         // Required empty public constructor
     }
 
-    public static MouthTab newInstance(String param1, String param2) {
-        MouthTab fragment = new MouthTab();
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment HatTab.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static HatTab newInstance(String param1, String param2) {
+        HatTab fragment = new HatTab();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,21 +71,22 @@ public class MouthTab extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_mouth_tab, container, false);
-        mouthButton1 = v.findViewById(R.id.mouthButton1);
-        mouthButton2 = v.findViewById(R.id.mouthButton2);
-        mouthButton3 = v.findViewById(R.id.mouthButton3);
-        mouthButton4 = v.findViewById(R.id.mouthButton4);
-        mouthButton5 = v.findViewById(R.id.mouthButton5);
-        mouthButton6 = v.findViewById(R.id.mouthButton6);
-        mouthButton1.setOnClickListener(this);
-        mouthButton2.setOnClickListener(this);
-        mouthButton3.setOnClickListener(this);
-        mouthButton4.setOnClickListener(this);
-        mouthButton5.setOnClickListener(this);
-        mouthButton6.setOnClickListener(this);
+        View v = inflater.inflate(R.layout.fragment_hat_tab, container, false);
+        hatButton1 = v.findViewById(R.id.hatButton1);
+        hatButton2 = v.findViewById(R.id.hatButton2);
+        hatButton3 = v.findViewById(R.id.hatButton3);
+        hatButton4 = v.findViewById(R.id.hatButton4);
+        hatButton5 = v.findViewById(R.id.hatButton5);
+        hatButton6 = v.findViewById(R.id.hatButton6);
+        hatButton1.setOnClickListener(this);
+        hatButton2.setOnClickListener(this);
+        hatButton3.setOnClickListener(this);
+        hatButton4.setOnClickListener(this);
+        hatButton5.setOnClickListener(this);
+        hatButton6.setOnClickListener(this);
         return v;
     }
+
 
     @Override
     public void onClick(View v) {
@@ -93,28 +98,46 @@ public class MouthTab extends Fragment implements View.OnClickListener {
         switch (v.getTag().toString()) {
             default:
                 break;
-            case "mouth1":
-                DVEditor.putInt("mouth", R.drawable.mouth_1);
+            case "hat1":
+                DVEditor.putInt("back_hat_color", R.drawable.empty);
+                DVEditor.putInt("back_hat_line", R.drawable.empty);
+                DVEditor.putInt("front_hat_color", R.drawable.empty);
+                DVEditor.putInt("front_hat_line", R.drawable.empty);
                 DVEditor.apply();
                 break;
-            case "mouth2":
-                DVEditor.putInt("mouth", R.drawable.mouth_2);
+            case "hat2":
+                DVEditor.putInt("back_hat_color", R.drawable.hat_1_color);
+                DVEditor.putInt("back_hat_line", R.drawable.hat_1_line);
+                DVEditor.putInt("front_hat_color", R.drawable.empty);
+                DVEditor.putInt("front_hat_line", R.drawable.empty);
                 DVEditor.apply();
                 break;
-            case "mouth3":
-                DVEditor.putInt("mouth", R.drawable.mouth_3);
+            case "hat3":
+                DVEditor.putInt("back_hat_color", R.drawable.empty);
+                DVEditor.putInt("back_hat_line", R.drawable.empty);
+                DVEditor.putInt("front_hat_color", R.drawable.hat_2_color);
+                DVEditor.putInt("front_hat_line", R.drawable.hat_2_line);
                 DVEditor.apply();
                 break;
-            case "mouth4":
-                DVEditor.putInt("mouth", R.drawable.mouth_4);
+            case "hat4":
+                DVEditor.putInt("back_hat_color", R.drawable.empty);
+                DVEditor.putInt("back_hat_line", R.drawable.empty);
+                DVEditor.putInt("front_hat_color", R.drawable.hat_3_color);
+                DVEditor.putInt("front_hat_line", R.drawable.hat_3_line);
                 DVEditor.apply();
                 break;
-            case "mouth5":
-                DVEditor.putInt("mouth", R.drawable.mouth_5);
+            case "hat5":
+                DVEditor.putInt("back_hat_color", R.drawable.empty);
+                DVEditor.putInt("back_hat_line", R.drawable.empty);
+                DVEditor.putInt("front_hat_color", R.drawable.hat_4_color);
+                DVEditor.putInt("front_hat_line", R.drawable.hat_4_line);
                 DVEditor.apply();
                 break;
-            case "mouth6":
-                DVEditor.putInt("mouth", R.drawable.mouth_6);
+            case "hat6":
+                DVEditor.putInt("back_hat_color", R.drawable.empty);
+                DVEditor.putInt("back_hat_line", R.drawable.empty);
+                DVEditor.putInt("front_hat_color", R.drawable.hat_5_color);
+                DVEditor.putInt("front_hat_line", R.drawable.hat_5_line);
                 DVEditor.apply();
                 break;
         }
